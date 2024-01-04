@@ -1,0 +1,13 @@
+*/.DS_Store
+.DS_store
+node_modules
+.env
+test.controller.js
+test.js
+/dist
+/config
+/temp_
+*.log
+/logs
+
+package-lock.json 

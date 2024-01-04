@@ -1,0 +1,18 @@
+
+<form name="form" id="form" action = "https://nice.checkplus.co.kr/CheckPlusSafeModel/service.cb"; method="post">
+    <input type="hidden" id="m" name="m" value="service" />
+    <input type="hidden" id="enc_data" name="enc_data" value="<%= data? data.enc_data.replace(/\s/g,"+") : '' %>" /> </br>
+    <input type="hidden" id="integrity_value" name="integrity_value" value="<%= data? data.integrity_value.replace(/\s/g,"+") : '' %>" /> <br>
+    <input type="hidden" id="token_version_id" name="token_version_id" value="<%= data? data.token_version_id.replace(/\s/g,"+") : '' %>" />
+  Will redirect after soon
+  <br>don't close browser.
+  <br><strong>if not redirect,</strong>  <input type="submit" value="click here" style="background:none; border-width:0px; color:blue; text-decoration:underline; font-size:30">
+</form>
+<script>
+window.onload = ()=>{
+  console.log("loading");
+  setTimeout(()=>{
+    document.getElementById("form").submit();
+  },2000)
+}
+</script>
